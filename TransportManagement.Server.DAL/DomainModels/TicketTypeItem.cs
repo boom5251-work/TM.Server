@@ -10,6 +10,7 @@ namespace TransportManagement.Server.DAL.DomainModels
     /// </summary>
     [Table("TicketTypes")]
     [Index(nameof(UniqueKey), IsUnique = true)]
+    [Index(nameof(UniqueName), IsUnique = true)]
     public sealed class TicketTypeItem
     {
         /// <summary>
@@ -23,6 +24,13 @@ namespace TransportManagement.Server.DAL.DomainModels
         /// </summary>
         [Required]
         public int UniqueKey { get; set; }
+
+        /// <summary>
+        /// Уникальное название.
+        /// </summary>
+        [Required]
+        [MaxLength(20)]
+        public string UniqueName { get; set; } = string.Empty;
 
 
         /// <summary>
