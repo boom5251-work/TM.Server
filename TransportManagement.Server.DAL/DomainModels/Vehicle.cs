@@ -31,7 +31,15 @@ namespace TransportManagement.Server.DAL.DomainModels
         [ForeignKey(nameof(VehicleBrand))]
         public uint BrandId { get; set; }
 
+        /// <summary>
+        /// Уникальный идентификатор депо, к которому принадлежит транспорное средство (внешний ключ).
+        /// </summary>
+        [ForeignKey(nameof(Depot))]
+        public uint DepotId { get; set; }
+
 
         internal VehicleBrand? VehicleBrand { get; set; }
+
+        internal Depot? Depot { get; set; }
     }
 }

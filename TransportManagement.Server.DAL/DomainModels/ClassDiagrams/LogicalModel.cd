@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TransportManagement.Server.DAL.DomainModels.Route">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAgAAAAAAAAAAQAAAgAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>DomainModels\Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.RoutesStops">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Route" Type="TransportManagement.Server.DAL.DomainModels.Route">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.225" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Stop" Type="TransportManagement.Server.DAL.DomainModels.Stop">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.245" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAAEAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\RoutesStops.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Route" />
+      <Property Name="Stop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.Stop">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\Stop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.StopFixing">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Stop" Type="TransportManagement.Server.DAL.DomainModels.Stop" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="2.688" />
+        <Point X="6.25" Y="2.688" />
+        <Point X="6.25" Y="2.18" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.984" Y="0.231" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Route" Type="TransportManagement.Server.DAL.DomainModels.Route" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="3" />
+        <Point X="2.532" Y="3" />
+        <Point X="2.532" Y="1.938" />
+        <Point X="2" Y="1.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.594" Y="-0.444" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Vehicle" Type="TransportManagement.Server.DAL.DomainModels.Vehicle">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.185" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAACAAAEAAAAAABAAEgAQAIAAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\StopFixing.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Stop" />
+      <Property Name="Route" />
+      <Property Name="Vehicle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.Ticket">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="TicketType" Type="TransportManagement.Server.DAL.DomainModels.TicketTypeItem">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.058" Y="0.137" Height="0.182" Width="0.916" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\Ticket.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TicketType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.TicketActionItem">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Action" Type="TransportManagement.Server.DAL.DomainModels.Base.TicketAction" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.5" Y="4.25" />
+        <Point X="10.026" Y="4.25" />
+        <Point X="10.026" Y="7.119" />
+        <Point X="10.5" Y="7.119" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.253" Y="0.826" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>DomainModels\TicketActionItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Action" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.TicketTypeItem">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Type" Type="TransportManagement.Server.DAL.DomainModels.Base.TicketType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.184" Height="0.182" Width="0.544" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\TicketTypeItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.Vehicle">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <AssociationLine Name="VehicleBrand" Type="TransportManagement.Server.DAL.DomainModels.VehicleBrand">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.299" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Depot" Type="TransportManagement.Server.DAL.DomainModels.Depot" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="4.312" />
+        <Point X="7.524" Y="4.312" />
+        <Point X="7.524" Y="6.59" />
+        <Point X="8" Y="6.59" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.239" Y="0.995" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAECAAABAAAAAAAQAAAAAAAAQAAA=</HashCode>
+      <FileName>DomainModels\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleBrand" />
+      <Property Name="Depot" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.VehicleFixing">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Vehicle" Type="TransportManagement.Server.DAL.DomainModels.Vehicle">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.189" Y="0.068" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Route" Type="TransportManagement.Server.DAL.DomainModels.Route" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="3.25" />
+        <Point X="1.25" Y="2.565" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.68" Y="0.277" Height="0.182" Width="0.637" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAEAIAAAhBAAAgAQAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\VehicleFixing.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vehicle" />
+      <Property Name="Route" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.VehicleBrand">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <AssociationLine Name="VehicleType" Type="TransportManagement.Server.DAL.DomainModels.VehicleTypeItem" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="5.875" />
+        <Point X="4" Y="5.875" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.298" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAEAAQCAAgAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>DomainModels\VehicleBrand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.VehicleTypeItem">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="Type" Type="TransportManagement.Server.DAL.DomainModels.Base.VehicleType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="6.738" />
+        <Point X="3.25" Y="7.438" />
+        <Point X="2" Y="7.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.402" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAACAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\VehicleTypeItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.TicketValidation">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <AssociationLine Name="TicketAction" Type="TransportManagement.Server.DAL.DomainModels.TicketActionItem">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.056" Y="0.492" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="StopFixing" Type="TransportManagement.Server.DAL.DomainModels.StopFixing" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="1.436" />
+        <Point X="7.505" Y="1.436" />
+        <Point X="7.505" Y="3.25" />
+        <Point X="4.5" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.989" Y="0.096" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAACAQAAABAAAAAAABAAAAAgAAAAAAA=</HashCode>
+      <FileName>DomainModels\TicketValidation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ticket" />
+      <Property Name="TicketAction" />
+      <Property Name="StopFixing" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TransportManagement.Server.DAL.DomainModels.Depot">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <AssociationLine Name="VehicleType" Type="TransportManagement.Server.DAL.DomainModels.VehicleTypeItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.812" Y="7.43" />
+        <Point X="8.812" Y="7.773" />
+        <Point X="4.748" Y="7.773" />
+        <Point X="4.748" Y="6.312" />
+        <Point X="4" Y="6.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.203" Y="-0.909" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQCAAgAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>DomainModels\Depot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="TransportManagement.Server.DAL.DomainModels.Base.TicketAction">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>DomainModels\Base\TicketAction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TransportManagement.Server.DAL.DomainModels.Base.TicketType">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAEAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAAACAA=</HashCode>
+      <FileName>DomainModels\Base\TicketType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TransportManagement.Server.DAL.DomainModels.Base.VehicleType">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAAAAAgAAAAAAAAAAAAACAABAAABAAAAAAAAA=</HashCode>
+      <FileName>DomainModels\Base\VehicleType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
